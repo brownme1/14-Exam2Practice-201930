@@ -6,8 +6,8 @@ This problem provides practice at:
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Morgan Brown.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 # Students:
@@ -40,8 +40,8 @@ def main():
     # UN-comment tests as you work the problems.
     ###########################################################################
 
-    # run_test_init()
-    # run_test_append_string()
+    run_test_init()
+    run_test_append_string()
     # run_test_double()
     # run_test_shrink()
     # run_test_double_then_shrink()
@@ -95,9 +95,11 @@ class Box(object):
           :type volume: int
         """
         # ---------------------------------------------------------------------
-        # TODO: 2. Implement and test this function.
+        # DONE: 2. Implement and test this function.
         #     See the testing code (below) for more examples.
         # ---------------------------------------------------------------------
+        self.contents = contents
+        self.volume = volume
         # ---------------------------------------------------------------------
         # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
         #    DIFFICULTY:      3
@@ -136,9 +138,22 @@ class Box(object):
           :type additional_contents: str
         """
         # ---------------------------------------------------------------------
-        # TODO: 3. Implement and test this function.
+        # DONE: 3. Implement and test this function.
         #     See the testing code (below) for more examples.
         # ---------------------------------------------------------------------
+        space = self.volume - len(self.contents)
+        number_of_characters_to_append = min(space, len(additional_contents))
+
+        stuff_to_add = ''
+        for k in range(number_of_characters_to_append):
+            stuff_to_add = stuff_to_add + additional_contents[k]
+        self.contents = self.contents + stuff_to_add
+
+        stuff_to_return = ''
+        for k in range(number_of_characters_to_append, len(additional_contents)):
+            stuff_to_return = stuff_to_return + additional_contents[k]
+
+        return stuff_to_return
         # ---------------------------------------------------------------------
         # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
         #    DIFFICULTY:      10
@@ -196,6 +211,7 @@ class Box(object):
         # TODO: 4. Implement and test this function.
         #     The testing code is already written for you (above).
         # ---------------------------------------------------------------------
+        
         # ---------------------------------------------------------------------
         # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
         #    DIFFICULTY:      5
