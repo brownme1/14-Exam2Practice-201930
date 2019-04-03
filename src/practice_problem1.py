@@ -211,7 +211,7 @@ class Box(object):
         # TODO: 4. Implement and test this function.
         #     The testing code is already written for you (above).
         # ---------------------------------------------------------------------
-        
+
         # ---------------------------------------------------------------------
         # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
         #    DIFFICULTY:      5
