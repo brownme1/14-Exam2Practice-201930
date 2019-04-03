@@ -211,7 +211,18 @@ class Box(object):
         # TODO: 4. Implement and test this function.
         #     The testing code is already written for you (above).
         # ---------------------------------------------------------------------
+        space = self.volume
 
+        stuff_to_double = ''
+        for k in range(len(self.contents)):
+            stuff_to_double = stuff_to_double + self.contents[k]
+        self.contents = self.contents + stuff_to_double
+
+        stuff_to_return = ''
+        for k in range():
+            stuff_to_return = stuff_to_return +
+
+        return stuff_to_return
         # ---------------------------------------------------------------------
         # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
         #    DIFFICULTY:      5
