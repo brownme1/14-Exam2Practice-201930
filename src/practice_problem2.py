@@ -59,6 +59,16 @@ def run_test_practice_problem2a():
     print('Testing the   practice_problem2a   function:')
     print('--------------------------------------------------')
 
+    sequence = [1,2,3,4,5]
+    delta = 0
+    print("Expected:", [1,2,3,4,5])
+    print("Actual: ", practice_problem2a(sequence, delta))
+
+    sequence = [82, 15, 3, 49, -2]
+    delta = 5
+    print("Expected:", [87, 20, 8, 54, 3])
+    print("Actual: ", practice_problem2a(sequence, delta))
+
 
 def practice_problem2a(sequence, delta):
     """
@@ -79,13 +89,18 @@ def practice_problem2a(sequence, delta):
       :type delta:    int
     """
     ###########################################################################
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     WRITE THE TESTS FIRST (above).
     ###########################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   5 minutes.
     ###########################################################################
+    new = []
+    for k in range(len(sequence)):
+        new = new + [sequence[k] + delta]
+    return new
+
 
 
 def run_test_practice_problem2b():
@@ -187,13 +202,21 @@ def practice_problem2b(sequence):
       :type sequence: [str]
     """
     ###########################################################################
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     ###########################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   10 minutes.
     ###########################################################################
+    new = ''
+    for k in range(len(sequence)):
+        s = sequence[k]
+        if s == '':
+            pass
+        else:
+            new = new + s[0]
+    return new
 
 
 ###############################################################################

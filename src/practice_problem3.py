@@ -180,6 +180,12 @@ def practice_problem3a(circles):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   10 minutes.
     ###########################################################################
+    product = 1
+    for k in range(len(circles)):
+        c = circles[k]
+        point = c.center
+        product = product *point.x
+    return product
 
 
 def run_test_practice_problem3b():
@@ -354,6 +360,12 @@ def practice_problem3b(sequence):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   8 minutes.
     ###########################################################################
+    last = len(sequence) - 1
+    for k in range(last,-1):
+        if last[0] == sequence[k]:
+            return True
+        else:
+            False
 
 
 def run_test_practice_problem3c():
